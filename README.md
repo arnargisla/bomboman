@@ -5,4 +5,4 @@ A [Bomberman](https://en.wikipedia.org/wiki/Bomberman) clone written from scratc
 
 ![Game preview](https://fat.gfycat.com/FlamboyantPointlessGoldeneye.gif)
 
-On the above GIF a human, top left corner, is playing against three AI players.
+On the above GIF a human player, top left corner, is playing against three AI players.
