@@ -1,0 +1,16 @@
+Week 1
+
+In the first week we will implement a functional basic version of bomberman.
+Decide on art direction.
+
+Week 2
+
+In the second week we will create artwork for characters, mobs, powerups, 
+tiles etc. We will also start finding/creating sounds for the game.
+We will have a brainstorm session inwhere we try to come up with interesting 
+novel features for our version of the game.
+
+Week 3
+
+In the third week we will fine-tune the artwork and sounds of the game. 
+We might also implement any new features we have come up with or thought of.

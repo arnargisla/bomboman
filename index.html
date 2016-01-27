@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://notendur.hi.is/~pk/308G/Asteroids_Exercise/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Bomberman Clone</title>
+  <style type="text/css">
+        canvas {
+          image-rendering: optimizeSpeed;             /* Older versions of FF          */
+          image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+          image-rendering: -webkit-optimize-contrast; /* Safari                        */
+          image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+          image-rendering: pixelated;                 /* Awesome future-browsers       */
+          -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+        } 
+        
+        .stuff{
+          float: left;
+          position: relative;
+          left: 1em;
+          max-width: 20em;
+        }
+        
+        @font-face {
+          font-family: 'Freshman';
+          src: url('fonts/Freshman.ttf');
+        }
+  </style>
+  </head>
+  <body style="float: left">
+
+	<canvas id="myCanvas" width="600" height="600" style="border: 1px solid black;float: left;">
+	Sorry, but your browser does not support the HTML5 canvas tag.
+	</canvas>
+
+    <div id="output" style="float: left"></div>
+
+    <script src="./js/globals.js"></script>
+    <script src="./js/consts.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/keys.js"></script>
+    <script src="./js/handleMouse.js"></script>
+
+    <script src="./js/spatialManager.js"></script>
+    <script src="./js/entityManager.js"></script>
+    <script src="./js/AudioSystem.js"></script>
+
+    <script src="./js/Sprite.js"></script>
+    <script src="./js/Powerups.js"></script>
+    
+    <script src="./js/AI.js"></script>
+    <script src="./js/Entity.js"></script>
+    <script src="./js/Grid.js"></script>
+    <script src="./js/Player.js"></script>
+    <script src="./js/Arena.js"></script>
+    <script src="./js/Bomb.js"></script>
+    
+    <script src="./js/Button.js"></script>
+    <script src="./js/Menu.js"></script>
+    <script src="./js/Winscreen.js"></script>
+
+    <!--<script src="./js/Rock.js"></script>-->
+    <!--<script src="./js/Bullet.js"></script>-->
+    <!--<script src="./js/Ship.js"></script>    -->
+
+    
+    <script src="./js/update.js"></script>
+    <script src="./js/render.js"></script>
+
+    <script src="./js/createInitialArena.js"></script>
+    <script src="./js/imagesPreload.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script src="./js/Bomberman.js"></script>
+    <div class="stuff">
+      
+      <table>
+        <tr>
+          <td>
+            Music Volume: 
+          </td>
+          <td>
+            0.0
+          </td>
+          <td>
+            <input id="musicslider" type="range" min="0" max="0.3" step="0.001" value="0.05" onchange="g_sounds.backgroundmusic.volume = this.value;"/>
+          </td>
+          <td>
+            1.0
+          </td>
+        </tr>
+        <tr>
+          <td>
+            SFX Volume: 
+          </td>
+          <td>
+            0.0
+          </td>
+          <td>
+            <input id="sfxslider" type="range" min="0" max="1" step="0.05" value="0.5" onchange="AudioSystem.setSfxVolume(this.value);"/>
+          </td>
+          <td>
+            1.0
+          </td>
+        </tr>
+      </table>
+      
+      <div>
+        Player 1 Controls:
+        <ul>
+          <li>Move: W, A, S, D </li>
+          <li>Place bomb: SPACE </li>
+        </ul>  
+        
+        Player 2 Controls:
+        <ul>
+          <li>Move: UP, DOWN, RIGHT, LEFT </li>
+          <li>Place bomb: ENTER </li>
+        </ul>  
+        
+        Player 3 Controls:
+        <ul>
+          <li>Move: I, J, K, L </li>
+          <li>Place bomb: O </li>
+        </ul>  
+
+        Menu Controls:
+        <ul>
+          <li>Start game: L </li>
+          <li>In/de-crement humans: W/S </li>
+          <li>In/de-crement computers: E/D </li>
+        </ul>  
+      </div>
+
+      <div>
+        Bomboman - a bomberman clone. <br>
+        A small clone of bomberman with only one level. The most interesting part of this version is watching the ai battle it out. Set humans to 0 and computers to 4 and relax while the computer does the gaming for you. "Toggle render AI weights shows the weight for each square according to each AI (best viewed with only 1 AI). Trying to play the AI can be frusterating, as they are very efficiant at grabbing upgrades. (When it comes to destroying you they can be very dumb.
+      </div>
+      <br>
+      
+      <div>
+        <button onClick="g_renderAiWeights = !g_renderAiWeights">
+          Toggle Render AI Weights
+        </button>
+      </div>
+    </div>
+  
+
+</body></html>
